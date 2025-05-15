@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* criando variáveis */
+:root {
+  --background: black;
+  --color: white;
+}
+
+/* resetando os estilos padrões do navegador */
+* {
+  /* espaçamento externo e interno zerados */
+  margin: 0;
+  padding: 0;
+
+  /* desabilitar borda padrão nos elementos */
+  box-sizing: border-box;
+
+  /* espaçamento entre as letras de uma frase */
+  letter-spacing: 0;
+
+  /* evitar serrilhamento da fonte */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+body {
+  /* utilizando variáveis para o fundo e a fonte */
+  background-color: var(--background);
+  color: var(--color);
+}
+
+header {
+  /* tornando os filhos de header flexíveis (um ao lado do outro) */
+  font-family: "Noto Sans", sans-serif;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  border: 1px white solid;
+
+  padding: 2rem;
+}
+
+.system-title {
+  display: flex;
+  align-items: center;
+  
+  /* espaçamento interno entre os elementos */
+  gap: 1rem;
+
+  img {
+    height: 52px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
