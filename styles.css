@@ -24,6 +24,8 @@
 }
 
 body {
+  font-family: "Noto Sans", sans-serif;
+
   /* utilizando variáveis para o fundo e a fonte */
   background-color: var(--background);
   color: var(--color);
@@ -31,8 +33,6 @@ body {
 
 header {
   /* tornando os filhos de header flexíveis (um ao lado do outro) */
-  font-family: "Noto Sans", sans-serif;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,19 +42,33 @@ header {
   padding: 2rem;
 }
 
-.system-title {
+.branding {
   display: flex;
   align-items: center;
   
   /* espaçamento interno entre os elementos */
   gap: 1rem;
 
+  /* altura: tamanho da logotipo */
   img {
     height: 52px;
   }
 }
 
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-links {
   display: flex;
+
+  list-style: none;
   gap: 8px;
+
+  li > a {
+    text-decoration: none;
+    color: var(--color);
+  }
 }
