@@ -25,6 +25,7 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
+  height: 100vh;
 
   /* utilizando variáveis para o fundo e a fonte */
   background-color: var(--background);
@@ -49,6 +50,10 @@ header {
   /* espaçamento interno entre os elementos */
   gap: 1rem;
 
+  h1 {
+    font-weight: 200;
+  }
+
   /* altura: tamanho da logotipo */
   img {
     height: 52px;
@@ -59,6 +64,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* border: 1px solid white; */
+  padding: 1rem;
 }
 
 .nav-links {
@@ -68,7 +76,17 @@ header {
   gap: 8px;
 
   li > a {
+    padding: 0.50rem;
+    /* border: 1px solid red; */
     text-decoration: none;
     color: var(--color);
+
   }
+}
+
+#nav-button {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 4px;
+  /* padding: 1rem; */
 }
