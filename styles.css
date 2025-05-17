@@ -2,8 +2,10 @@
 
 /* criando variáveis */
 :root {
-  --background: black;
-  --color: white;
+  --black: black;
+  --white: white;
+
+  --border-white: white;
 }
 
 /* resetando os estilos padrões do navegador */
@@ -28,8 +30,8 @@ body {
   height: 100vh;
 
   /* utilizando variáveis para o fundo e a fonte */
-  background-color: var(--background);
-  color: var(--color);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 header {
@@ -37,56 +39,68 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 90px;
+  padding: 0px 2.25rem;
   
-  border: 1px white solid;
-
-  padding: 2rem;
+  border-bottom: 1px var(--border-white) solid;
 }
 
-.branding {
+header > .branding {
+  height: 100%;
   display: flex;
   align-items: center;
-  
-  /* espaçamento interno entre os elementos */
-  gap: 1rem;
-
-  h1 {
-    font-weight: 200;
-  }
+  gap: 1rem; /* espaçamento interno entre os elementos */
 
   /* altura: tamanho da logotipo */
   img {
     height: 52px;
   }
-}
 
-.main-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* border: 1px solid white; */
-  padding: 1rem;
-}
-
-.nav-links {
-  display: flex;
-
-  list-style: none;
-  gap: 8px;
-
-  li > a {
-    padding: 0.50rem;
-    /* border: 1px solid red; */
-    text-decoration: none;
-    color: var(--color);
-
+  h1 {
+    font-weight: 100;
   }
 }
 
-#nav-button {
-  text-align: center;
-  border: 1px solid white;
-  border-radius: 4px;
-  /* padding: 1rem; */
-}
+header > nav {
+  height: 100%;
+  display: flex;
+  padding: 0px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.64rem;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  
+    padding: 0.52rem;
+    list-style: none;
+  
+    li > a {
+      font-weight: 200;
+      text-decoration: none;
+      color: var(--white);
+    };
+
+    li > a:hover {
+      text-decoration: underline;
+      color: rgb(187, 187, 187)
+    };
+  };
+
+  button {
+    font-size: 18px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--border-white);
+    padding: 1rem;
+  };
+
+  button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  };
+};
+
