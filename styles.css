@@ -162,15 +162,53 @@ main > a {
   width: 14rem;
   text-align: center;
   padding: 0.52rem 0.28rem;
+  color: white;
 
+  text-decoration: none;
   background-color: var(--black);
   border-radius: 1rem;
   border: 1px solid white;
 }
 
+main > a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
 #port {
   /* background-color: red; */
   height: calc(100vh - 90px);
+}
+
+.container-feedback {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid white; */
+  border-radius: 1rem;
+  height: 94%;
+
+  margin: 0 3.4rem;
+  gap: 2rem;
+
+  h1 {
+    font-weight: 100;
+    text-align: center;
+    /* text-decoration: underline; */
+  }
+
+  article {
+    padding: 2rem;
+
+    border: 1px solid white;
+    border-radius: 1rem;
+  }
+}
+
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
 }
 
 #group {

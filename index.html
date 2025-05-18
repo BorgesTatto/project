@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
     <title>Home - Borges Tatto</title>
@@ -50,14 +50,17 @@
       </nav>
     </header>
 
-    <div id="background"> 
+    <div id="background">
       <main>
         <div>
           <h1>Transformando Arte em Pele</h1>
-          <p>"A beleza do corpo é um reflexo da beleza da alma." - <span>Platão</span>.</p>
+          <p>
+            "A beleza do corpo é um reflexo da beleza da alma." -
+            <span>Platão</span>.
+          </p>
         </div>
 
-        <a>VEJA O PORTFÓLIO</a>
+        <a href="#porftólio">VEJA O PORTFÓLIO</a>
       </main>
     </div>
 
@@ -68,25 +71,51 @@
            style="position: absolute;
                   top: 0; left: 0;
                   height: 100%;
-                  z-index: 0;">
+                  z-index: 0;
+                  overflow: hidden;
+                  width: 100%;">
       </div>
-    
+
       <!-- conteúdo sobre as partículas -->
-      <div style="position: relative; z-index: 1; padding: 2rem;">
+      <div
+        class="container-feedback"
+        style="position: relative; z-index: 1; padding: 2rem"
+      >
         <h1>Feedback</h1>
-        <div>
-          <div>
-            <div>
-              <img src="..." alt="..."/>
-              <img src="..." alt="..."/>
-            </div>
+
+        <div class="container-cards">
+          <article>
+            <figure>
+              <img src="..." alt="..." />
+              <img src="..." alt="..." />
+            </figure>
             <div>
               <h2>Henrique Maximo</h2>
               <p>Gostei muito da tatuagem, ficou incrível!</p>
             </div>
-          </div>
-          <div></div>
-          <div></div>
+          </article>
+
+          <article>
+            <figure>
+              <img src="..." alt="..." />
+              <img src="..." alt="..." />
+            </figure>
+            <div>
+              <h2>Henrique Maximo</h2>
+              <p>Gostei muito da tatuagem, ficou incrível!</p>
+            </div>
+          </article>
+
+          <article>
+            <figure>
+              <img src="..." alt="..." />
+              <img src="..." alt="..." />
+            </figure>
+            <div>
+              <h2>Henrique Maximo</h2>
+              <p>Gostei muito da tatuagem, ficou incrível!</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -104,59 +133,58 @@
     <section id="contact"></section>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        particlesJS('particles-js', {
-          "particles": {
-            "number": {
-              "value": 50,
-              "density": { "enable": true, "value_area": 800 }
+      document.addEventListener("DOMContentLoaded", function () {
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 50,
+              density: { enable: true, value_area: 800 },
             },
-            "color": { "value": "#ffffff" },
-            "shape": {
-              "type": "circle",
-              "stroke": { "width": 0, "color": "#000000" }
+            color: { value: "#ffffff" },
+            shape: {
+              type: "circle",
+              stroke: { width: 0, color: "#000000" },
             },
-            "opacity": {
-              "value": 0.5,
-              "random": false,
-              "anim": { "enable": false }
+            opacity: {
+              value: 0.5,
+              random: false,
+              anim: { enable: false },
             },
-            "size": {
-              "value": 3,
-              "random": true,
-              "anim": { "enable": false }
+            size: {
+              value: 3,
+              random: true,
+              anim: { enable: false },
             },
-            "line_linked": {
-              "enable": true,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
             },
-            "move": {
-              "enable": true,
-              "speed": 2,
-              "direction": "none",
-              "random": false,
-              "straight": false,
-              "out_mode": "out"
-            }
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+            },
           },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": { "enable": true, "mode": "grab" },
-              "onclick": { "enable": true, "mode": "push" }
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "grab" },
+              onclick: { enable: true, mode: "push" },
             },
-            "modes": {
-              "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-              "push": { "particles_nb": 4 }
-            }
+            modes: {
+              grab: { distance: 140, line_linked: { opacity: 1 } },
+              push: { particles_nb: 4 },
+            },
           },
-          "retina_detect": true
+          retina_detect: true,
         });
       });
     </script>
-    
   </body>
 </html>
