@@ -230,3 +230,26 @@ main > a:hover {
   background-color: rgb(17, 0, 255);
   height: calc(100vh - 90px);
 }
+
+/* PORTFOLIO */
+
+.arrow_left{
+
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  height: 560px;
+  width: 1040px;
+  gap: 22px;
+}
+
+
