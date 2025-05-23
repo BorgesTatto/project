@@ -177,11 +177,27 @@ main > a:hover {
 }
 
 #port {
-  /* background-color: red; */
+  position: relative;
   height: calc(100vh - 90px);
+
+  overflow: hidden;
+}
+
+.particles {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  height: 100%;
+  width: 100%;
+
+  z-index: 0;
+  overflow: hidden;
 }
 
 .container-feedback {
+  position: relative;
+  z-index: 1;
+  /* padding: 2rem; */
   display: flex;
   flex-direction: column;
   /* border: 1px solid white; */
