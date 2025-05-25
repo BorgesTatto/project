@@ -163,6 +163,7 @@ main > a {
   text-align: center;
   padding: 0.52rem 0.28rem;
   color: white;
+  transition: 1s;
 
   text-decoration: none;
   background-color: var(--black);
@@ -177,44 +178,39 @@ main > a:hover {
 }
 
 #port {
-  position: relative;
   height: calc(100vh - 90px);
-
-  overflow: hidden;
 }
 
 .particles {
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 
   z-index: 0;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .container-feedback {
-  position: relative;
-  z-index: 1;
-  /* padding: 2rem; */
   display: flex;
   flex-direction: column;
-  /* border: 1px solid white; */
-  border-radius: 1rem;
-  height: 94%;
-
-  margin: 0 3.4rem;
+  height: 100%;
   gap: 2rem;
 
-  h1 {
-    font-weight: 100;
+  h1 { 
+    font-weight: 400;
+    font-size: 1.5rem;  
+    color: var(--white);  
+    letter-spacing: 1px;  
+    text-transform: uppercase;  
+    
     text-align: center;
     /* text-decoration: underline; */
   }
 
   article {
-    padding: 2rem;
+    /* padding: 2rem; */
 
     border: 1px solid white;
     border-radius: 1rem;
@@ -225,6 +221,60 @@ main > a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  /* overflow: hidden; */
+  z-index: 1000;
+}
+
+.banner {
+  /* background-image: linear-gradient(rgba(68, 68, 68, 0.3), rgb(0, 0, 0)), url(assets/feedback/img1.png); */
+  height: 312px;
+  background-size: cover;
+  border-bottom: 2px solid var(--white);
+}
+
+.profile {
+  position: relative;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px; 
+  height: 92px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.my-opinion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  /* max-width: 260px;  */
+  /* max-height: 360px;  */
+  /* padding: 0 2rem; */
+
+  /* gap: 1rem; */
+  justify-content: center;
+  text-align: center;
+
+  z-index: 0;
+
+  h2 {
+    font-weight: 300;  
+    font-size: 1.5rem;  
+    color: var(--white);  
+    letter-spacing: 1px;  
+    margin-bottom: 0.5rem;  
+    text-transform: uppercase;  
+  }
+  
+  p {
+    padding: 0.25rem;
+    font-weight: 200;  
+    font-size: 1rem;  
+    color: var(--white);  
+    line-height: 1.6;  
+    
+    margin: 0 auto;  
+  }
 }
 
 #group {
