@@ -272,6 +272,7 @@ main > a:hover {
     font-size: 1rem;  
     color: var(--white);  
     line-height: 1.6;  
+    max-width: 438px;
     
     margin: 0 auto;  
   }
