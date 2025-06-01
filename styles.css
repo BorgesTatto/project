@@ -225,7 +225,120 @@ main > a:hover {
   background-color: white;
 }
 
-#port {
+#port-section {
+  display: flex;
+  /* justify-content: center; */
+  
+  align-items: center;
+
+  width: 100%;
+  height: calc(100vh - 5.60rem);
+  /* padding: 0px 8rem;  */
+  /* margem de conteúdo: 128px */
+}
+
+.port {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-items: center; */
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+        
+  padding: 2rem;
+  gap: 2rem;
+
+  z-index: 1;
+
+  h1 {
+    font-weight: 100;
+    font-size: 3.25rem;
+    
+    letter-spacing: 0.1em;       
+    text-transform: uppercase;  
+    
+    text-align: center;
+    /* text-decoration: underline; */
+
+    color: var(--white);  
+  }
+
+  p {
+    font-weight: 100;
+    font-size: 0.80rem;
+    
+    letter-spacing: 0.1em; 
+    width: 900px;
+
+    color: var(--white);
+  }
+}
+
+.port > .carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  padding: 0 8rem;
+  
+  gap: 5rem; /* 1rem - 16px */
+  /* flex-direction: column; */
+}
+
+.port-button {
+  height: 48px;
+  width: 34px;
+
+  border: 2px solid rgb(187, 187, 187);
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: 1s;
+}
+
+.port-button:hover {
+  background-color: var(--black);
+  color: var(--white);
+
+  border: 2px solid var(--white);
+}
+
+/* .arrow_left {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+} */
+
+.cards {
+  display: flex;
+  justify-content: center;
+
+  min-width: 260px;
+  max-width: 960px;
+  gap: 1.2rem;
+
+  
+
+  img {
+    /* height: 100%; */
+    width: 360px;
+    overflow: hidden;
+    
+    border:2px solid white;
+    border-radius: 52px;
+    
+    z-index: 1;
+  }
+}
+
+#feedback {
   display: flex;
   /* justify-content: center; */
   
@@ -356,24 +469,24 @@ main > a:hover {
   }
 }
 
-#group {
+/* #group {
   background-color: rgb(0, 255, 34);
   height: calc(100vh - 5.60rem);
   
   z-index: 0;
-}
+} */
 
-#about {
+/* #about {
   background-color: rgb(255, 255, 0);
   height: calc(100vh - 5.60rem);
-}
+} */
 
-#feedback {
+/* #feedback {
   background-color: rgb(204, 0, 255);
   height: calc(100vh - 5.60rem);
-}
+} */
 
-#contact {
+/* #contact {
   background-color: rgb(17, 0, 255);
   height: calc(100vh - 5.60rem);
-}
+} */

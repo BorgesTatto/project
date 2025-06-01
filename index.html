@@ -1,216 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Borges Tatto</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <header>
-      <!-- Marca e título do site -->
-      <div class="branding">
-        <a href="/" aria-label="Página inicial — Borges Tatto">
-          <img src="./assets/logo.png" alt="Logotipo Borges Tatto" />
-        </a>
-        <h1>BORGES TATTO</h1>
-      </div>
+  <title>Home - Borges Tatto</title>
 
-      <!-- Navegação principal -->
-      <nav aria-label="Navegação principal">
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#portfólio">Portfólio</a>
-          </li>
-          <li>
-            <a href="#equipe">Equipe</a>
-          </li>
-          <li>
-            <a href="#sobre">Sobre</a>
-          </li>
-          <li>
-            <a href="#feedback">Feedback</a>
-          </li>
-        </ul>
+  <!-- importação css -->
+  <link rel="stylesheet" href="styles.css" />
 
-        <button>Contato</button>
-      </nav>
-    </header>
+  <!-- biblioteca de animação -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <div id="hero-section">
-      <main>
-        <div class="hero-content">
-          <h1>Transformando Pele em Arte</h1>
-          <div class="quote">
-            <span class="row"></span>
-            <p>
-              "A beleza do corpo é um reflexo da beleza da alma." -
-              <span>Platão</span>.
-            </p>
-          </div>
-        </div>
+  <!-- biblioteca de icons -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
 
-        <a href="#porftólio">VEJA O PORTFÓLIO</a>
-      </main>
+  <!-- biblioteca de partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Marca e título do site -->
+    <div class="branding">
+      <a href="/" aria-label="Página inicial — Borges Tatto">
+        <img src="./assets/logo.png" alt="Logotipo Borges Tatto" />
+      </a>
+      <h1>BORGES TATTO</h1>
     </div>
 
-    <!-- Seção de Portfólio -->
-    <section id="port">
-      <!-- conteúdo sobre as partículas -->
-      <div class="container-feedback" style="position: relative">
-        <!-- div para as partículas -->
-        <div
-          id="particles-js"
-          style="
+    <!-- Navegação principal -->
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#portfólio">Portfólio</a>
+        </li>
+        <li>
+          <a href="#equipe">Equipe</a>
+        </li>
+        <li>
+          <a href="#sobre">Sobre</a>
+        </li>
+        <li>
+          <a href="#feedback">Feedback</a>
+        </li>
+      </ul>
+
+      <button>Contato</button>
+    </nav>
+  </header>
+
+  <div id="hero-section">
+    <main>
+      <div class="hero-content">
+        <h1>Transformando Pele em Arte</h1>
+        <div class="quote">
+          <span class="row"></span>
+          <p>
+            "A beleza do corpo é um reflexo da beleza da alma." -
+            <span>Platão</span>.
+          </p>
+        </div>
+      </div>
+
+      <a href="#porftólio">VEJA O PORTFÓLIO</a>
+    </main>
+  </div>
+
+  <!-- Seção de Portfólio -->
+  <section id="port-section">
+    <div class="port">
+      <!-- <div id="particles-js" style="
             overflow: hidden;
             position: absolute;
             width: 100%;
             height: 100%;
             z-index: 0;
-          "
-        ></div>
+          "></div> -->
+          
+      <h1>Portfólio</h1>
 
-        <h1>Feedback</h1>
-        <div class="list-card">
-          <div class="container-cards">
-            <article>
-              <figure
-                style="display: flex; flex-direction: column; width: 100%"
-              >
-                <img
-                  class="banner"
-                  src="assets/feedback/client1-tatto.jpg"
-                  alt=""
-                />
-                <img
-                  class="profile"
-                  src="./assets/feedback/client1.jpg"
-                  alt=""
-                />
-              </figure>
-              <div class="my-opinion">
-                <h2>Henrique Maximo</h2>
-                <p>Gostei muito da tatuagem, ficou incrível!</p>
-              </div>
-            </article>
+      <figure class="carousel">
+        <button class="port-button">
+          <i class="ph ph-arrow-left"></i>
+        </button>
 
-            <article>
-              <figure
-                style="display: flex; flex-direction: column; width: 100%"
-              >
-                <img class="banner" src="assets/feedback/img1.png" alt="" />
-                <img
-                  class="profile"
-                  src="./assets/feedback/person1.png"
-                  alt=""
-                />
-              </figure>
-              <div class="my-opinion">
-                <h2>...</h2>
-                <p>
-                  ...
-                </p>
-              </div>
-            </article>
+        <section class="cards">
+          <img src="./assets/portfolio/01.png" alt="" />
+          <img src="./assets/portfolio/02.jpg" alt="" />
+          <img src="./assets/portfolio/03.jpg" alt="" />
+        </section>
 
-            <article>
-              <figure
-                style="display: flex; flex-direction: column; width: 100%"
-              >
-                <img class="banner" src="assets/feedback/img1.png" alt="" />
-                <img
-                  class="profile"
-                  src="./assets/feedback/person1.png"
-                  alt=""
-                />
-              </figure>
-              <div class="my-opinion">
-                <h2>...</h2>
-                <p>
-                  ...
-                </p>
-              </div>
-            </article> 
-          </div>
+        <button class="port-button">
+          <i class="ph ph-arrow-right"></i>
+        </button>
+      </figure>
+
+      <p>
+        Confira nosso portfólio de tatuagens, onde cada imagem revela o
+        trabalho único e apaixonado dos nossos artistas. Aqui, você encontra
+        uma variedade de estilos – desde os desenhos minimalistas até os
+        projetos mais ousados – que transformam ideias e sentimentos em arte
+        na pele.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção de Feedback -->
+  <section id="feedback">
+    <!-- conteúdo sobre as partículas -->
+    <div class="container-feedback" style="position: relative">
+      <!-- div para as partículas -->
+      <div id="particles-js" style="
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "></div>
+
+      <h1>Feedback</h1>
+      <div class="list-card">
+        <div class="container-cards">
+          <article>
+            <figure style="display: flex; flex-direction: column; width: 100%">
+              <img class="banner" src="assets/feedback/client1-tatto.jpg" alt="" />
+              <img class="profile" src="./assets/feedback/client1.jpg" alt="" />
+            </figure>
+            <div class="my-opinion">
+              <h2>Henrique Maximo</h2>
+              <p>Gostei muito da tatuagem, ficou incrível!</p>
+            </div>
+          </article>
+
+          <article>
+            <figure style="display: flex; flex-direction: column; width: 100%">
+              <img class="banner" src="assets/feedback/img1.png" alt="" />
+              <img class="profile" src="./assets/feedback/person1.png" alt="" />
+            </figure>
+            <div class="my-opinion">
+              <h2>...</h2>
+              <p>
+                ...
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <figure style="display: flex; flex-direction: column; width: 100%">
+              <img class="banner" src="assets/feedback/img1.png" alt="" />
+              <img class="profile" src="./assets/feedback/person1.png" alt="" />
+            </figure>
+            <div class="my-opinion">
+              <h2>...</h2>
+              <p>
+                ...
+              </p>
+            </div>
+          </article>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Seção de Equipe -->
-    <!-- <section id="group"></section> -->
+  <!-- Seção de Equipe -->
+  <!-- <section id="group"></section> -->
 
-    <!-- Seção de Sobre -->
-    <!-- <section id="about"></section> -->
+  <!-- Seção de Sobre -->
+  <!-- <section id="about"></section> -->
 
-    <!-- Seção de Feedback -->
-    <!-- <section id="feedback"></section> -->
+  <!-- Seção de Feedback -->
+  <!-- <section id="feedback"></section> -->
 
-    <!-- Seção de Contato -->
-    <!-- <section id="contact"></section> -->
+  <!-- Seção de Contato -->
+  <!-- <section id="contact"></section> -->
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        particlesJS("particles-js", {
-          particles: {
-            number: {
-              value: 50,
-              density: { enable: true, value_area: 800 },
-            },
-            color: { value: "#ffffff" },
-            shape: {
-              type: "circle",
-              stroke: { width: 0, color: "#000000" },
-            },
-            opacity: {
-              value: 0.5,
-              random: false,
-              anim: { enable: false },
-            },
-            size: {
-              value: 3,
-              random: true,
-              anim: { enable: false },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 2,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-            },
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 50,
+            density: { enable: true, value_area: 800 },
           },
-          interactivity: {
-            detect_on: "canvas",
-            events: {
-              onhover: { enable: true, mode: "grab" },
-              onclick: { enable: true, mode: "push" },
-            },
-            modes: {
-              grab: { distance: 140, line_linked: { opacity: 1 } },
-              push: { particles_nb: 4 },
-            },
+          color: { value: "#ffffff" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
           },
-          retina_detect: true,
-        });
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: { enable: false },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: { enable: false },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
