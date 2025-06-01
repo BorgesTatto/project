@@ -240,9 +240,16 @@ p{
   background-color: rgb(0, 0, 0);
   height: calc(100vh - 90px);
   display: flex;
+
   align-items: center;
   justify-content: center;
   gap: 30rem;
+
+  justify-content:center;
+  justify-content: space-around;
+  align-items: center;
+
+
 
   H3{
     font-size: 44px;
@@ -273,17 +280,22 @@ h2{
  }
 
 p{
+
   height: 710px;
   width: 570px;
+  width: 550px;
   font-weight: 200;
   font-size: 24px;
   padding: 2rem;
+  height: 100;
 }
 
+H1 {
+  padding: 2rem;
+  
 }
-
 }
-
+}
 #feedback {
   background-color: rgb(204, 0, 255);
   height: calc(100vh - 90px);
