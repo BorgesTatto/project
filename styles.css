@@ -10,88 +10,101 @@
 
 /* resetando os estilos padrões do navegador */
 * {
+  box-sizing: border-box; /* desabilitar borda padrão nos elementos */
+
   /* espaçamento externo e interno zerados */
   margin: 0;
   padding: 0;
-
-  /* desabilitar borda padrão nos elementos */
-  box-sizing: border-box;
-
-  /* espaçamento entre as letras de uma frase */
-  letter-spacing: 0;
-
-  overflow: auto;
-  scroll-behavior: smooth;
-  /* suave */
-
+  
   /* evitar serrilhamento da fonte */
+  scroll-behavior: smooth; /* suave */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
-  height: 100vh;
-
   /* utilizando variáveis para o fundo e a fonte */
   background-color: var(--black);
   color: var(--white);
+
+  /* definindo fonte */
+  font-family: "Noto Sans", sans-serif;
+
+  /* body ocupará 100% da viewport */
+  height: 100vh;
 }
 
 header {
   /* tornando os filhos de header flexíveis (um ao lado do outro) */
-  background-color: var(--black);
   display: flex;
+
   justify-content: space-between;
   align-items: center;
-  height: 90px;
-  padding: 0px 2.25rem;
 
+  /* altura do header */
+  height: 5.60rem;
+
+  /* espaçamento interno do header */
+  padding: 0 2.25rem;
+
+  /* deixar header fixo no topo */
   position: sticky;
   top: 0;
-  z-index: 10000;
 
+  /* prioridade sobre qualquer outro elemento */
+  z-index: 1;
+
+  background-color: var(--black);
   border-bottom: 1px var(--border-white) solid;
+  background: linear-gradient(to right, #000, #262626 30%, #000);
+
 }
 
 header > .branding {
-  height: 100%;
   display: flex;
+
   align-items: center;
-  gap: 1rem;
-  /* espaçamento interno entre os elementos */
+  gap: 1rem; /* espaçamento interno entre logo e título */
 
   /* altura: tamanho da logotipo */
   img {
-    height: 52px;
+    height: 3.25rem;
   }
 
   h1 {
+    cursor: default;
     font-weight: 100;
   }
 }
 
 header > nav {
-  height: 100%;
   display: flex;
-  padding: 0px 24px;
+
   justify-content: center;
   align-items: center;
-  gap: 0.64rem;
-
+  
+  gap: 0.875rem; /* espaçamento entre links e button */
+  padding: 0px 1rem; /* espaço interno na direita e esquerda para todos os elementos */
+  
   ul {
     display: flex;
-    gap: 1rem;
 
+    gap: 0.875rem;
     padding: 0.52rem;
+
+    /* remover bolinha dos links */
     list-style: none;
 
+    /* estilizando título links */
     li > a {
       font-weight: 200;
       text-decoration: none;
+      
+      transition: 1s;
       color: var(--white);
     }
 
+    /* estilizando quando mouse estive em cima */
     li > a:hover {
       text-decoration: underline;
       color: rgb(187, 187, 187)
@@ -99,86 +112,128 @@ header > nav {
   }
 
   button {
-    font-size: 18px;
+    padding: 1rem;
+
+    font-size: 1.125rem;
+    border-radius: 8px;
+
+    transition: 1s;
+    
     background-color: var(--black);
     color: var(--white);
-    border-radius: 8px;
     border: 1px solid var(--border-white);
-    padding: 1rem;
   }
 
   button:hover {
-    cursor: pointer;
+    cursor: pointer; /* mudar cursor do mouse quando estiver em cima */
+
     background-color: white;
     color: black;
   }
 }
 
-#background {
+#hero-section {
   display: flex;
-  height: calc(100vh - 90px);
-
-  background-image: linear-gradient(rgba(68, 68, 68, 0.3), rgb(0, 0, 0)), url("assets/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  
   align-items: center;
-  padding: 0px 8rem;
+
+  height: calc(100vh - 5.60rem);
+  padding: 0px 8rem; /* margem de conteúdo: 128px */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(68, 68, 68, 0.3), rgb(0, 0, 0)), url("assets/background.png");
 }
 
 main {
   display: flex;
   flex-direction: column;
 
-  gap: 4rem;
-
-  padding: 1rem;
+  /* limitando a largura do conteúdo principal */
   width: 916px;
+
+  gap: 4rem;
+  padding: 1rem;
+  
 }
 
-main > div {
+main > .hero-content {
   display: flex;
   flex-direction: column;
 
   gap: 1.4rem;
-  
+
+  /* sombra para os textos */
+  text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.7); 
+
   h1 {
-    letter-spacing: 0.2em;
-    font-size: 52px;
     font-weight: 100;
+    font-size: 3.25rem;
+
+    letter-spacing: 0.2em;
   }
 
   p {
     font-weight: 700;
-    width: 20rem;
 
+    width: 24rem;
+
+    /* estilo ao nome do autor da frase */
     span {
       font-weight: 100;
     }
   }
 }
 
+.hero-content > .quote {
+  display: flex; 
+
+  align-items: center; 
+
+  gap: 1.2rem;
+}
+
+.hero-content .row {
+  display: block;
+
+  height: 2.15rem; 
+  width: 0.32rem; 
+  
+  background-color: white; 
+   
+  border-radius: 2px;
+}
+
 main > a {
-  width: 14rem;
   text-align: center;
+
+  width: 14rem;
   padding: 0.52rem 0.28rem;
-  color: white;
+  
+  text-decoration: none;
+
   transition: 1s;
 
-  text-decoration: none;
-  background-color: var(--black);
-  border-radius: 1rem;
+  color: white;
   border: 1px solid white;
+  border-radius: 1rem;
+  background-color: var(--black);
 }
 
 main > a:hover {
   cursor: pointer;
-  background-color: white;
+  
   color: black;
+  background-color: white;
 }
 
 #port {
-  height: calc(100vh - 90px);
+  display: flex;
+  
+  align-items: center;
+
+  height: calc(100vh - 5.60rem);
+  padding: 0px 8rem; /* margem de conteúdo: 128px */
 }
 
 .particles {
