@@ -37,23 +37,25 @@
     <nav aria-label="Navegação principal">
       <ul>
         <li>
-          <a href="#home">Home</a>
+          <a href="#hero-section">Home</a>
         </li>
         <li>
-          <a href="#portfólio">Portfólio</a>
+          <a href="#port-section">Portfólio</a>
         </li>
         <li>
-          <a href="#equipe">Equipe</a>
+          <a href="#group">Equipe</a>
         </li>
         <li>
-          <a href="#sobre">Sobre</a>
+          <a href="#about">Sobre</a>
         </li>
         <li>
-          <a href="#feedback">Feedback</a>
+          <a href="#feedback-section">Feedback</a>
         </li>
       </ul>
 
-      <button>Contato</button>
+      <a href="#contact">
+        <button>Contato</button>
+      </a>
     </nav>
   </header>
 
@@ -84,7 +86,7 @@
             height: 100%;
             z-index: 0;
           "></div> -->
-          
+
       <h1>Portfólio</h1>
 
       <figure class="carousel">
@@ -113,8 +115,78 @@
     </div>
   </section>
 
+  <!-- Seção de Equipe -->
+  <section id="group">
+    <!-- <div id="particles-group" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div> -->
+
+    <!-- Conteúdo visível -->
+    <div class="group">
+      <h1>Quem Somos</h1>
+
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 2rem; padding: 0 8rem;">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+          <button class="port-button">
+            <i class="ph ph-arrow-left"></i>
+          </button>
+
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="linha-vertical"></div>
+
+            <p>
+              Conhecido pela atenção aos<br>
+              detalhes e projetos autorais, Caio<br>
+              acredita que tatuar é mais do que<br>
+              estética — é marcar momentos e<br>
+              sentimentos de forma única e<br>
+              duradoura.
+            </p>
+
+            <div style="display: flex; flex-direction: column;">
+              <img height="460px" src="./assets/group/image1.png" alt="Foto de Caio Mendes" />
+              <p>Caio Mendes</p>
+            </div>
+          </div>
+
+          <button class="port-button">
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- pontinhos -->
+        <div>
+          <i class="ph ph-circle"></i>
+          <i class="ph ph-circle"></i>
+          <i class="ph ph-circle"></i>
+        </div>
+      </div>
+  </section>
+
+  <!-- Seção de Sobre -->
+  <section id="about">
+    <div class="text-container">
+      <h1>Equipe</h1>
+      <p>Minha conexão com a arte começou
+        na infância, inspirado por grafites
+        de um jogo de dança. Desde então,
+        desenvolvi habilidade com o desenho,
+        o que sempre me destacou nas artes.
+        Anos depois, minha irmã Beatriz
+        me apresentou ao universo da tatuagem,
+        e juntos mergulhamos nessa jornada.
+        Após muito estudo e prática,
+        abrimos O Borges Tattoo, onde
+        atuamos como tatuadores, unindo técnica,
+        criatividade e paixão pela arte.
+      </p>
+    </div>
+
+    <div class="video-container">
+      <video src="../project/assets/video-studio.mp4" type="video/mp4">
+    </div>
+  </section>
+
   <!-- Seção de Feedback -->
-  <section id="feedback">
+  <section id="feedback-section">
     <!-- conteúdo sobre as partículas -->
     <div class="container-feedback" style="position: relative">
       <!-- div para as partículas -->
@@ -130,7 +202,7 @@
       <div class="list-card">
         <div class="container-cards">
           <article>
-            <figure style="display: flex; flex-direction: column; width: 100%">
+            <figure style="display: flex; flex-direction: column;">
               <img class="banner" src="assets/feedback/client1-tatto.jpg" alt="" />
               <img class="profile" src="./assets/feedback/client1.jpg" alt="" />
             </figure>
@@ -138,7 +210,7 @@
               <h2>Henrique Maximo</h2>
               <p>
                 Gostei muito da tatuagem, ficou incrível!
-                Foi uma experiência gratificante. Asmei 
+                Foi uma experiência gratificante. Asmei
                 de verdade, com todo o afinco.
               </p>
             </div>
@@ -174,17 +246,33 @@
     </div>
   </section>
 
-  <!-- Seção de Equipe -->
-  <!-- <section id="group"></section> -->
-
-  <!-- Seção de Sobre -->
-  <!-- <section id="about"></section> -->
-
-  <!-- Seção de Feedback -->
-  <!-- <section id="feedback"></section> -->
-
   <!-- Seção de Contato -->
-  <!-- <section id="contact"></section> -->
+  <section id="contact">
+    <div class="port">
+      <!-- <div id="particles-js" style="
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "></div> -->
+
+      <h1>Contato</h1>
+
+      <figure class="carousel" style="display: flex; justify-content: center; align-items: center;  width: 100%;">
+        <section class="cards">
+          <iframe style="border-radius: 1rem; border: 4px solid white;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.4498118926165!2d-46.765963083091314!3d-23.683136167091252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5239279b4521%3A0x4abc864f457ec467!2sR.%20Santa%20Z%C3%A9lia%2C%20177%20-%20Jardim%20Santa%20Zelia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004933-110!5e0!3m2!1spt-BR!2sbr!4v1748807683014!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </figure>
+
+      <p>
+        Nossa localização.
+      </p>
+    </div>
+  </section>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
