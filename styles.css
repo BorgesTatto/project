@@ -227,11 +227,14 @@ main > a:hover {
 
 #port {
   display: flex;
+  justify-content: center;
   
   align-items: center;
 
+  width: 100%;
   height: calc(100vh - 5.60rem);
-  padding: 0px 8rem; /* margem de conteúdo: 128px */
+  /* padding: 0px 8rem;  */
+  /* margem de conteúdo: 128px */
 }
 
 .particles {
@@ -241,14 +244,14 @@ main > a:hover {
   height: 100%;
   width: 100%;
 
-  z-index: 0;
+  /* z-index: 0; */
   overflow: hidden; 
 }
 
 .container-feedback {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* width: 100%; */
   gap: 2rem;
 
   h1 { 
@@ -275,12 +278,14 @@ main > a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   /* overflow: hidden; */
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 .banner {
   /* background-image: linear-gradient(rgba(68, 68, 68, 0.3), rgb(0, 0, 0)), url(assets/feedback/img1.png); */
-  height: 312px;
+  height: 9.5rem;
+
+  border-radius: 1rem;
   background-size: cover;
   border-bottom: 2px solid var(--white);
 }
