@@ -227,7 +227,7 @@ main > a:hover {
 
 #port {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   
   align-items: center;
 
@@ -251,14 +251,19 @@ main > a:hover {
 .container-feedback {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+
   gap: 2rem;
 
   h1 { 
-    font-weight: 400;
-    font-size: 1.5rem;  
-    color: var(--white);  
-    letter-spacing: 1px;  
+    font-weight: 100;
+    font-size: 3.25rem;
+    letter-spacing: 0.1em;
+     
+    color: var(--white);    
     text-transform: uppercase;  
     
     text-align: center;
@@ -273,17 +278,25 @@ main > a:hover {
   }
 }
 
+.list-card {
+  padding: 0 8rem;
+}
+
 .container-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   /* overflow: hidden; */
   /* z-index: 1000; */
+
+  article {
+    z-index: 1;
+  }
 }
 
 .banner {
   /* background-image: linear-gradient(rgba(68, 68, 68, 0.3), rgb(0, 0, 0)), url(assets/feedback/img1.png); */
-  height: 9.5rem;
+  height: 10rem;
 
   border-radius: 1rem;
   background-size: cover;
