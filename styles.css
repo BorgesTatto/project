@@ -279,6 +279,8 @@ main > a:hover {
 }
 
 .list-card {
+  justify-content: center;
+  height: 100%;
   padding: 0 8rem;
 }
 
@@ -317,7 +319,7 @@ main > a:hover {
 .my-opinion {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   /* max-width: 260px;  */
   /* max-height: 360px;  */
   /* padding: 0 2rem; */
@@ -333,19 +335,19 @@ main > a:hover {
     font-size: 1.5rem;  
     color: var(--white);  
     letter-spacing: 1px;  
-    margin-bottom: 0.5rem;  
-    text-transform: uppercase;  
+    /* margin-bottom: 0.5rem;   */
+    /* text-transform: uppercase;   */
   }
   
   p {
-    padding: 0.25rem;
+    /* padding: 0.25rem; */
     font-weight: 200;  
     font-size: 1rem;  
     color: var(--white);  
     line-height: 1.6;  
     max-width: 438px;
     
-    margin: 0 auto;  
+    /* margin: 0 auto;   */
   }
 }
 
