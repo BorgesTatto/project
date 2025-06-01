@@ -279,7 +279,12 @@ main > a:hover {
 }
 
 .list-card {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  
+  gap: 2rem;
+  
   height: 100%;
   padding: 0 8rem;
 }
