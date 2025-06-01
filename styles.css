@@ -29,9 +29,6 @@ body {
 
   /* definindo fonte */
   font-family: "Noto Sans", sans-serif;
-
-  /* body ocupará 100% da viewport */
-  height: 100vh;
 }
 
 header {
@@ -50,11 +47,12 @@ header {
   /* deixar header fixo no topo */
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
 
   /* prioridade sobre qualquer outro elemento */
-  z-index: 1;
+  z-index: 999;
 
-  background-color: var(--black);
   border-bottom: 1px var(--border-white) solid;
   background: linear-gradient(to right, #000, #262626 30%, #000);
 
@@ -335,20 +333,22 @@ main > a:hover {
 
 #group {
   background-color: rgb(0, 255, 34);
-  height: calc(100vh - 90px);
+  height: calc(100vh - 5.60rem);
+  
+  z-index: 0;
 }
 
 #about {
   background-color: rgb(255, 255, 0);
-  height: calc(100vh - 90px);
+  height: calc(100vh - 5.60rem);
 }
 
 #feedback {
   background-color: rgb(204, 0, 255);
-  height: calc(100vh - 90px);
+  height: calc(100vh - 5.60rem);
 }
 
 #contact {
   background-color: rgb(17, 0, 255);
-  height: calc(100vh - 90px);
+  height: calc(100vh - 5.60rem);
 }
