@@ -324,8 +324,6 @@ main > a:hover {
   max-width: 960px;
   gap: 1.2rem;
 
-  
-
   img {
     /* height: 100%; */
     width: 360px;
@@ -333,7 +331,7 @@ main > a:hover {
     
     border:2px solid white;
     border-radius: 52px;
-    
+
     z-index: 1;
   }
 }
@@ -434,10 +432,10 @@ main > a:hover {
   border: 2px solid var(--white);
 }
 
-.my-opinion {
+.comment {
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 0.8rem;
   /* max-width: 260px;  */
   /* max-height: 360px;  */
   /* padding: 0 2rem; */
@@ -450,22 +448,25 @@ main > a:hover {
 
   h2 {
     font-weight: 300;  
-    font-size: 1.5rem;  
-    color: var(--white);  
+    font-size: 1.4rem;  
+    
     letter-spacing: 1px;  
+
     /* margin-bottom: 0.5rem;   */
     /* text-transform: uppercase;   */
+
+    color: var(--white);  
   }
   
   p {
-    /* padding: 0.25rem; */
-    font-weight: 200;  
-    font-size: 1rem;  
-    color: var(--white);  
-    line-height: 1.6;  
-    max-width: 438px;
+    font-size: 0.80rem;
+    font-weight: 100;
+    
+    letter-spacing: 0.1em; 
+    padding: 0.25rem;
     
     /* margin: 0 auto;   */
+    color: var(--white);  
   }
 }
 
