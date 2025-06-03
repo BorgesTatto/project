@@ -21,9 +21,21 @@
 
   <!-- biblioteca de partículas -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.waves.min.js"></script>
+
 </head>
 
 <body>
+  <div id="particles-js" style="
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "></div>
+
   <header>
     <!-- Marca e título do site -->
     <div class="branding">
@@ -62,7 +74,7 @@
   <div id="hero-section">
     <main>
       <div class="hero-content">
-        <h1>Transformando Pele em Arte</h1>
+        <h1 id="app"></h1>
         <div class="quote">
           <span class="row"></span>
           <p>
@@ -72,21 +84,13 @@
         </div>
       </div>
 
-      <a href="#porftólio">VEJA O PORTFÓLIO</a>
+      <a href="#port-section">VEJA O PORTFÓLIO</a>
     </main>
   </div>
 
   <!-- Seção de Portfólio -->
   <section id="port-section">
     <div class="port">
-      <!-- <div id="particles-js" style="
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-          "></div> -->
-
       <h1>Portfólio</h1>
 
       <figure class="carousel">
@@ -95,9 +99,9 @@
         </button>
 
         <section class="cards">
-          <img src="./assets/portfolio/01.png" alt="" />
-          <img src="./assets/portfolio/02.jpg" alt="" />
-          <img src="./assets/portfolio/03.jpg" alt="" />
+          <img src="./assets/portfolio/01.png" alt />
+          <img src="./assets/portfolio/02.jpg" alt />
+          <img src="./assets/portfolio/03.jpg" alt />
         </section>
 
         <button class="port-button">
@@ -117,8 +121,6 @@
 
   <!-- Seção de Equipe -->
   <section id="group">
-    <!-- <div id="particles-group" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div> -->
-
     <!-- Conteúdo visível -->
     <div class="group">
       <h1>Quem Somos</h1>
@@ -163,14 +165,11 @@
 
   <!-- Seção de Sobre -->
   <section id="about">
-    <!-- partículas -->
-    <!-- <div></div> -->
-
     <div class="about">
-      <h1>Equipe</h1>
-
-      <div style="display: flex; flex-direction: row;">
+      <h1>Sobre</h1>
+      <div style="display: flex; flex-direction: row; gap: 12rem;">
         <div class="text-container">
+          <span style="height: 100%; width: 4px; background-color: white;"></span>
           <p>Minha conexão com a arte começou
             na infância, inspirado por grafites
             de um jogo de dança. Desde então,
@@ -197,24 +196,14 @@
 
   <!-- Seção de Feedback -->
   <section id="feedback-section">
-    <!-- conteúdo sobre as partículas -->
     <div class="container-feedback" style="position: relative">
-      <!-- div para as partículas -->
-      <div id="particles-js" style="
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-          "></div>
-
       <h1>Feedback</h1>
       <div class="list-card">
         <div class="container-cards">
           <article>
             <figure style="display: flex; flex-direction: column;">
-              <img class="banner" src="assets/feedback/client1-tatto.jpg" alt="" />
-              <img class="profile" src="./assets/feedback/client1.jpg" alt="" />
+              <img class="banner" src="assets/feedback/client1-tatto.jpg" alt />
+              <img class="profile" src="./assets/feedback/client1.jpg" alt />
             </figure>
             <div class="comment">
               <h2>Henrique Maximo</h2>
@@ -228,8 +217,8 @@
 
           <article>
             <figure style="display: flex; flex-direction: column; width: 100%">
-              <img class="banner" src="assets/feedback/img1.png" alt="" />
-              <img class="profile" src="./assets/feedback/person1.png" alt="" />
+              <img class="banner" src="assets/feedback/img1.png" alt />
+              <img class="profile" src="./assets/feedback/person1.png" alt />
             </figure>
             <div class="comment">
               <h2>...</h2>
@@ -241,8 +230,8 @@
 
           <article>
             <figure style="display: flex; flex-direction: column; width: 100%">
-              <img class="banner" src="assets/feedback/img1.png" alt="" />
-              <img class="profile" src="./assets/feedback/person1.png" alt="" />
+              <img class="banner" src="assets/feedback/img1.png" alt />
+              <img class="profile" src="./assets/feedback/person1.png" alt />
             </figure>
             <div class="comment">
               <h2>...</h2>
@@ -258,33 +247,62 @@
 
   <!-- Seção de Contato -->
   <section id="contact">
-    <div class="port">
-      <!-- <div id="particles-js" style="
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-          "></div> -->
-
+    <div class="contact">
       <h1>Contato</h1>
+      <iframe style="border-radius: 1rem; border: 4px solid white;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.4498118926165!2d-46.765963083091314!3d-23.683136167091252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5239279b4521%3A0x4abc864f457ec467!2sR.%20Santa%20Z%C3%A9lia%2C%20177%20-%20Jardim%20Santa%20Zelia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004933-110!5e0!3m2!1spt-BR!2sbr!4v1748807683014!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
 
-      <figure class="carousel" style="display: flex; justify-content: center; align-items: center;  width: 100%;">
-        <section class="cards">
-          <iframe style="border-radius: 1rem; border: 4px solid white;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.4498118926165!2d-46.765963083091314!3d-23.683136167091252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5239279b4521%3A0x4abc864f457ec467!2sR.%20Santa%20Z%C3%A9lia%2C%20177%20-%20Jardim%20Santa%20Zelia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004933-110!5e0!3m2!1spt-BR!2sbr!4v1748807683014!5m2!1spt-BR!2sbr"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-      </figure>
-
-      <p>
-        Nossa localização.
-      </p>
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li>Tel.: +55 11 98347-8673</li>
+          <li>Email: sampatatto@gmail.com</li>
+          <li>De segunda a sexta</li>
+          <li>Das 10h às 19h</li>
+        </ul>
+      
+        <address>
+          <h2 style="margin: 0;">Endereço: Rua Divina Comédia, 74</h2>
+        </address>
+      
+        <div>
+          <p>Siga-nos:</p>
+          <img src="facebook.png" alt="Facebook" />
+          <img src="instagram.png" alt="Instagram" />
+        </div>
+      </div>
     </div>
   </section>
 
   <script>
+    VANTA.WAVES({
+      el: "#vanta-bg",
+      color: 0x000000,
+      shininess: 50,
+      waveHeight: 20,
+      waveSpeed: 1,
+      zoom: 1.2
+    })
+
+    const app = document.getElementById('app');
+
+    // Instância Typewriter passando value da tag e configuração
+    const typewriter = new Typewriter(app, {
+      loop: true,
+      delay: 90,
+    });
+
+    // utilizando constante
+    typewriter
+      .typeString('Transformando Pele em Arte.')
+      .pauseFor(2000)
+      .deleteAll()
+      .typeString('Borges Tatto!')
+      .pauseFor(1000)
+      .start();
+
     document.addEventListener("DOMContentLoaded", function () {
       particlesJS("particles-js", {
         particles: {
