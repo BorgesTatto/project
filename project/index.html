@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Home - Borges Tatto</title>
+
+  <!-- importação css -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- biblioteca de animação -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- biblioteca de icons -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <!-- ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- biblioteca de partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <!-- Marca e título do site -->
+    <div class="branding">
+      <a href="/" aria-label="Página inicial — Borges Tatto">
+        <img src="./assets/logo.png" alt="Logotipo Borges Tatto" />
+      </a>
+      <h1>BORGES TATTO</h1>
+    </div>
+
+    <!-- Navegação principal -->
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li>
+          <a href="#hero-section">Home</a>
+        </li>
+        <li>
+          <a href="#port-section">Portfólio</a>
+        </li>
+        <li>
+          <a href="#group">Equipe</a>
+        </li>
+        <li>
+          <a href="#about">Sobre</a>
+        </li>
+        <li>
+          <a href="#feedback-section">Feedback</a>
+        </li>
+      </ul>
+
+      <a href="#contact">
+        <button>Contato</button>
+      </a>
+    </nav>
+  </header>
+
+  <div id="hero-section">
+    <main>
+      <div class="hero-content">
+        <h1>Transformando Pele em Arte</h1>
+        <div class="quote">
+          <span class="row"></span>
+          <p>
+            "A beleza do corpo é um reflexo da beleza da alma." -
+            <span>Platão</span>.
+          </p>
+        </div>
+      </div>
+
+      <a href="#porftólio">VEJA O PORTFÓLIO</a>
+    </main>
+  </div>
+
+  <!-- Seção de Portfólio -->
+  <section id="port-section">
+    <div class="port">
+      <!-- <div id="particles-js" style="
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "></div> -->
+
+      <h1>Portfólio</h1>
+
+      <figure class="carousel">
+        <button class="port-button">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+
+        <section class="cards">
+          <img src="./assets/portfolio/01.png" alt="" />
+          <img src="./assets/portfolio/02.jpg" alt="" />
+          <img src="./assets/portfolio/03.jpg" alt="" />
+        </section>
+
+        <button class="port-button">
+          <i class="ph ph-arrow-right"></i>
+        </button>
+      </figure>
+
+      <p>
+        Confira nosso portfólio de tatuagens, onde cada imagem revela o
+        trabalho único e apaixonado dos nossos artistas. Aqui, você encontra
+        uma variedade de estilos – desde os desenhos minimalistas até os
+        projetos mais ousados – que transformam ideias e sentimentos em arte
+        na pele.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção de Equipe -->
+  <section id="group">
+    <!-- <div id="particles-group" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div> -->
+
+    <!-- Conteúdo visível -->
+    <div class="group">
+      <h1>Quem Somos</h1>
+
+      <div style="display: flex; flex-direction: column; width: 100%; gap: 2rem; padding: 0 8rem;">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+          <button class="port-button">
+            <i class="ph ph-arrow-left"></i>
+          </button>
+
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="linha-vertical"></div>
+
+            <p>
+              Conhecido pela atenção aos<br>
+              detalhes e projetos autorais, Caio<br>
+              acredita que tatuar é mais do que<br>
+              estética — é marcar momentos e<br>
+              sentimentos de forma única e<br>
+              duradoura.
+            </p>
+
+            <div style="display: flex; flex-direction: column;">
+              <img height="260px" src="./assets/group/image1.png" alt="Foto de Caio Mendes" />
+              <p>Caio Mendes</p>
+            </div>
+          </div>
+
+          <button class="port-button">
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- pontinhos -->
+        <div>
+          <i class="ph ph-circle"></i>
+          <i class="ph ph-circle"></i>
+          <i class="ph ph-circle"></i>
+        </div>
+      </div>
+  </section>
+
+  <!-- Seção de Sobre -->
+  <section id="about">
+    <!-- partículas -->
+    <!-- <div></div> -->
+
+    <div class="about">
+      <h1>Equipe</h1>
+
+      <div style="display: flex; flex-direction: row;">
+        <div class="text-container">
+          <p>Minha conexão com a arte começou
+            na infância, inspirado por grafites
+            de um jogo de dança. Desde então,
+            desenvolvi habilidade com o desenho,
+            o que sempre me destacou nas artes.
+            Anos depois, minha irmã Beatriz
+            me apresentou ao universo da tatuagem,
+            e juntos mergulhamos nessa jornada.
+            Após muito estudo e prática,
+            abrimos O Borges Tattoo, onde
+            atuamos como tatuadores, unindo técnica,
+            criatividade e paixão pela arte.
+          </p>
+        </div>
+
+        <div class="video-container">
+          <video loop autoplay muted>
+            <source src="./assets/about/video-studio.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Feedback -->
+  <section id="feedback-section">
+    <!-- conteúdo sobre as partículas -->
+    <div class="container-feedback" style="position: relative">
+      <!-- div para as partículas -->
+      <div id="particles-js" style="
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "></div>
+
+      <h1>Feedback</h1>
+      <div class="list-card">
+        <div class="container-cards">
+          <article>
+            <figure style="display: flex; flex-direction: column;">
+              <img class="banner" src="assets/feedback/client1-tatto.jpg" alt="" />
+              <img class="profile" src="./assets/feedback/client1.jpg" alt="" />
+            </figure>
+            <div class="comment">
+              <h2>Henrique Maximo</h2>
+              <p>
+                Gostei muito da tatuagem, ficou incrível!
+                Foi uma experiência gratificante. Asmei
+                de verdade, com todo o afinco.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <figure style="display: flex; flex-direction: column; width: 100%">
+              <img class="banner" src="assets/feedback/img1.png" alt="" />
+              <img class="profile" src="./assets/feedback/person1.png" alt="" />
+            </figure>
+            <div class="comment">
+              <h2>...</h2>
+              <p>
+                ...
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <figure style="display: flex; flex-direction: column; width: 100%">
+              <img class="banner" src="assets/feedback/img1.png" alt="" />
+              <img class="profile" src="./assets/feedback/person1.png" alt="" />
+            </figure>
+            <div class="comment">
+              <h2>...</h2>
+              <p>
+                ...
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section id="contact">
+    <div class="port">
+      <!-- <div id="particles-js" style="
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "></div> -->
+
+      <h1>Contato</h1>
+
+      <figure class="carousel" style="display: flex; justify-content: center; align-items: center;  width: 100%;">
+        <section class="cards">
+          <iframe style="border-radius: 1rem; border: 4px solid white;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.4498118926165!2d-46.765963083091314!3d-23.683136167091252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5239279b4521%3A0x4abc864f457ec467!2sR.%20Santa%20Z%C3%A9lia%2C%20177%20-%20Jardim%20Santa%20Zelia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004933-110!5e0!3m2!1spt-BR!2sbr!4v1748807683014!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </figure>
+
+      <p>
+        Endereço: Rua Divina Comédia, 74, Jardim Santa Zélia, São Paulo - SP, 04933-110<br>
+      </p>
+
+      <div class="footer-contact-section">
+        <p>Contato</p>
+        <p>+55 (11) 98347-8673</p>
+        <p>Email:</p>
+        <p>Dias de funcionamento</p>
+        <p>Segunda a Sexta: 10h - 19h</p>
+        <p>Sábado: 10h - 16h</p>
+      </div>
+
+      <div class="whatsapp-button">
+        <link rel="stylesheet"
+          href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+        <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=5511983478673">
+          <div class="rwb-tooltip">Seja bem-vindo à BorgesTatto! Clique aqui e fale conosco no WhatsApp para agendar sua
+            tatuagem.</div>
+          <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+        </a>
+      </div>
+
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/guiltattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank" class="social-button instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/seupagina" target="_blank" class="social-button facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      
+
+      <!-- Rodapé com direitos autorais -->
+      <footer class="site-footer">
+        <p>© 2025 BorgesTatto – Todos os direitos reservados.</p>
+      </footer>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 50,
+            density: { enable: true, value_area: 800 },
+          },
+          color: { value: "#ffffff" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: { enable: false },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: { enable: false },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+    });
+  </script>
+</body>
+
+</html>
