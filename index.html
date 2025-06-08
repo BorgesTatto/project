@@ -249,113 +249,52 @@
   <section id="contact">
     <div class="contact">
       <h1>Contato</h1>
-      <iframe style="border-radius: 1rem; border: 4px solid white;"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.4498118926165!2d-46.765963083091314!3d-23.683136167091252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5239279b4521%3A0x4abc864f457ec467!2sR.%20Santa%20Z%C3%A9lia%2C%20177%20-%20Jardim%20Santa%20Zelia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004933-110!5e0!3m2!1spt-BR!2sbr!4v1748807683014!5m2!1spt-BR!2sbr"
-        width="600" height="450" style="border:0;" allowfullscreen loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
 
-      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="contact-content">
+        <iframe class="map" style="border-radius: 1rem; border: 4px solid white;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.4498118926165!2d-46.765963083091314!3d-23.683136167091252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5239279b4521%3A0x4abc864f457ec467!2sR.%20Santa%20Z%C3%A9lia%2C%20177%20-%20Jardim%20Santa%20Zelia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004933-110!5e0!3m2!1spt-BR!2sbr!4v1748807683014!5m2!1spt-BR!2sbr"
+          style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <p>
+          Endereço: Rua Divina Comédia, 74, Jardim Santa Zélia, São Paulo - SP, 04933-110<br>
+        </p>
+
         <ul style="list-style: none; padding: 0; margin: 0;">
           <li>Tel.: +55 11 98347-8673</li>
           <li>Email: sampatatto@gmail.com</li>
-          <li>De segunda a sexta</li>
-          <li>Das 10h às 19h</li>
+          <li>Segunda a Sexta: 10h - 19h</li>
+          <li>Sábado: 10h - 16h</li>
         </ul>
-      
-        <address>
-          <h2 style="margin: 0;">Endereço: Rua Divina Comédia, 74</h2>
-        </address>
-      
-        <div>
-          <p>Siga-nos:</p>
-          <img src="facebook.png" alt="Facebook" />
-          <img src="instagram.png" alt="Instagram" />
+
+        <div class="social-buttons">
+          <a href="https://www.instagram.com/guiltattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank" class="social-button instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="social-button facebook">
+            <i class="ph ph-facebook-logo"></i>
+          </a>
+
+          <div class="whatsapp-button">
+            <link rel="stylesheet"
+              href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+            <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=5511983478673">
+              <div class="rwb-tooltip">Clique aqui e fale conosco no WhatsApp para agendar sua
+                tatuagem.</div>
+              <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+            </a>
+          </div>
         </div>
       </div>
+
+      <footer style="margin-bottom: 1rem;">
+        <p>© 2025 BorgesTatto – Todos os direitos reservados.</p>
+      </footer>
     </div>
   </section>
 
-  <script>
-    VANTA.WAVES({
-      el: "#vanta-bg",
-      color: 0x000000,
-      shininess: 50,
-      waveHeight: 20,
-      waveSpeed: 1,
-      zoom: 1.2
-    })
-
-    const app = document.getElementById('app');
-
-    // Instância Typewriter passando value da tag e configuração
-    const typewriter = new Typewriter(app, {
-      loop: true,
-      delay: 90,
-    });
-
-    // utilizando constante
-    typewriter
-      .typeString('Transformando Pele em Arte.')
-      .pauseFor(2000)
-      .deleteAll()
-      .typeString('Borges Tatto!')
-      .pauseFor(1000)
-      .start();
-
-    document.addEventListener("DOMContentLoaded", function () {
-      particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 50,
-            density: { enable: true, value_area: 800 },
-          },
-          color: { value: "#ffffff" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: { enable: false },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: { enable: false },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "grab" },
-            onclick: { enable: true, mode: "push" },
-          },
-          modes: {
-            grab: { distance: 140, line_linked: { opacity: 1 } },
-            push: { particles_nb: 4 },
-          },
-        },
-        retina_detect: true,
-      });
-    });
-  </script>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
