@@ -434,15 +434,10 @@ main > a:hover {
 
 .video-container {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* padding: 10rem; */
-  /* width: 700px; */
-
-  /* height: 950px; */
 
   video {
-    height: 554px;
+    height: 32.52cqmax;
 
     min-height: 70px;
     max-height: 730px;
@@ -457,6 +452,8 @@ video {
 .text-container {
   display: flex;
   flex-direction: row;
+  flex: 1;
+
   padding: 3rem;
 
   gap: 2rem;
@@ -464,7 +461,7 @@ video {
   p {
     width: 550px;
     font-weight: 200;
-    font-size: 1.52rem;
+    font-size: 1.52cqmax;
     /* letter-spacing: 0.1em; */
     /* text-indent: 2.50rem; */
     text-align: justify;
@@ -689,7 +686,7 @@ video {
 .social-buttons {
   flex: 1;
   display: flex;
-  
+
   justify-content: center;
   gap: 1rem;
 }
