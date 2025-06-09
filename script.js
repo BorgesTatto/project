@@ -76,3 +76,26 @@ document.addEventListener("DOMContentLoaded", function () {
     retina_detect: true,
   });
 });
+
+const cards = document.querySelector(".cards");
+  const wrapper = document.querySelector(".cards-wrapper");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+
+  let currentIndex = 0;
+
+  function updateCarousel(direction) {
+    const card = cards.querySelector("img");
+    const cardWidth = card.offsetWidth + 19; // 360px + gap
+    const visibleCount = Math.floor(wrapper.offsetWidth / cardWidth);
+    const total = cards.children.length;
+    const maxIndex = total - visibleCount;
+
+    if (direction === "next" && currentIndex < maxIndex) currentIndex++;
+    if (direction === "prev" && currentIndex > 0) currentIndex--;
+
+    cards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => updateCarousel("next"));
+  prevBtn.addEventListener("click", () => updateCarousel("prev"));

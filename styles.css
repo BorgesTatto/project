@@ -245,12 +245,15 @@ main > a:hover {
   align-items: center;
   text-align: center;
 
+  height: 100%;
   width: 100%;
 
-  padding: 2rem;
+  /* padding: 2rem; */
   gap: 2rem;
 
   z-index: 1;
+
+  /* background-color: #1877f2; */
 
   h1 {
     font-weight: 100;
@@ -278,18 +281,44 @@ main > a:hover {
   }
 }
 
-.port .carousel {
+.carousel {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 
   width: 100%;
-  padding: 0 8rem;
+  max-width: 1280px;
 
-  gap: 5rem; /* 1rem - 16px */
-  /* flex-direction: column; */
+  margin: 0 auto;
+
+  padding: 0 2rem;
+
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.cards-wrapper {
+  overflow: hidden;
+  width: 100%;
+  
+  flex: 1;
+}
+
+.cards {
+  display: flex;
+  flex: 1;
+
+  gap: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cards img {
+  max-height: 342px;
+  min-height: 32px;
+  width: 12rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  flex-shrink: 0;
 }
 
 .port-button {
@@ -299,44 +328,20 @@ main > a:hover {
   border: 2px solid rgb(187, 187, 187);
   border-radius: 1rem;
 
-  z-index: 1;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.3s;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
 }
 
 .port-button:hover {
   background-color: var(--black);
   color: var(--white);
-
-  border: 2px solid var(--white);
-}
-
-/* .arrow_left {
-  display: flex;
-  justify-content: flex-start;
-  padding: 1rem;
-  width: 100px;
-  height: 100px;
-} */
-
-.cards {
-  display: flex;
-  justify-content: center;
-
-  min-width: 260px;
-  max-width: 960px;
-  gap: 1.2rem;
-
-  img {
-    /* height: 100%; */
-    width: 360px;
-    overflow: hidden;
-
-    border: 2px solid white;
-    border-radius: 1rem;
-
-    z-index: 1;
-  }
+  border-color: var(--white);
 }
 
 #group {
