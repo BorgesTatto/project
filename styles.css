@@ -11,6 +11,7 @@
 /* resetando os estilos padrões do navegador */
 * {
   box-sizing: border-box; /* desabilitar borda padrão nos elementos */
+  scroll-padding-top: 5.6rem; /* ocupar espaço no topo (header) */
 
   /* espaçamento externo e interno zerados */
   margin: 0;
@@ -94,17 +95,21 @@ header > nav {
 
     /* estilizando título links */
     li > a {
+      box-sizing: border-box;
+      padding: 2px 0;
       font-weight: 200;
       text-decoration: none;
 
-      transition: 1s;
+      transition: all 0.3s ease;
       color: var(--white);
     }
 
     /* estilizando quando mouse estive em cima */
     li > a:hover {
-      text-decoration: underline;
-      color: rgb(187, 187, 187);
+      /* text-decoration: underline; */
+      border-top: 1px solid rgb(187, 187, 187);
+      border-bottom: 1px solid rgb(187, 187, 187);
+      display: inline-block;
     }
   }
 
@@ -241,7 +246,7 @@ main > a:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   text-align: center;
 
@@ -279,6 +284,13 @@ main > a:hover {
     z-index: 1;
     color: var(--white);
   }
+
+  @media (min-height: 860px) {
+    p {
+      font-size: 1rem;
+      margin: 0 0 8rem 0;
+    }
+  }
 }
 
 .carousel {
@@ -290,8 +302,9 @@ main > a:hover {
   max-width: 1280px;
 
   margin: 0 auto;
-
   padding: 0 2rem;
+
+  flex: 1;
 
   gap: 1rem;
   overflow: hidden;
@@ -532,6 +545,10 @@ video {
 
     border: 1px solid white;
     border-radius: 1rem;
+  }
+
+  @media (min-height: 842px) {
+    padding-bottom: 5rem;
   }
 }
 
