@@ -1,12 +1,4 @@
-VANTA.WAVES({
-  el: "#vanta-bg",
-  color: 0x000000,
-  shininess: 50,
-  waveHeight: 20,
-  waveSpeed: 1,
-  zoom: 1.2,
-});
-
+// Capturando elemento usando id
 const app = document.getElementById("app");
 
 // Instância Typewriter passando value da tag e configuração
@@ -15,21 +7,32 @@ const typewriter = new Typewriter(app, {
   delay: 90,
 });
 
-// utilizando constante
+// Utilizando constante
 typewriter
-  .typeString("Transformando Pele em Arte.")
+  .typeString(
+    `<span style="-webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, .15);
+        border-radius: .375rem;">Transformando Pele em Arte.</span>`
+  )
   .pauseFor(2000)
   .deleteAll()
-  .typeString("Borges Tatto!")
+  .typeString(
+    `<span style="-webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, .15);
+        border-radius: .375rem;">Borges Tattoo!</span>`
+  )
   .pauseFor(1000)
   .start();
 
+// Manipulação das partículas usando função anônima assim que o conteúdo carregar
 document.addEventListener("DOMContentLoaded", function () {
   particlesJS("particles-js", {
     particles: {
       number: {
         value: 50,
-        density: { enable: true, value_area: 800 },
+        density: { enable: false, value_area: 800 },
       },
       color: { value: "#ffffff" },
       shape: {
@@ -77,25 +80,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Manipulação da estrutura em carroussel
 const cards = document.querySelector(".cards");
-  const wrapper = document.querySelector(".cards-wrapper");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
+const wrapper = document.querySelector(".cards-wrapper");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
-  let currentIndex = 0;
+let currentIndex = 0;
 
-  function updateCarousel(direction) {
-    const card = cards.querySelector("img");
-    const cardWidth = card.offsetWidth + 19; // 360px + gap
-    const visibleCount = Math.floor(wrapper.offsetWidth / cardWidth);
-    const total = cards.children.length;
-    const maxIndex = total - visibleCount;
+function updateCarousel(direction) {
+  const card = cards.querySelector("img");
+  const cardWidth = card.offsetWidth + 19; // 360px + gap
 
-    if (direction === "next" && currentIndex < maxIndex) currentIndex++;
-    if (direction === "prev" && currentIndex > 0) currentIndex--;
+  const visibleCount = Math.floor(wrapper.offsetWidth / cardWidth);
+  const total = cards.children.length;
 
-    cards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
+  const maxIndex = total - visibleCount;
 
-  nextBtn.addEventListener("click", () => updateCarousel("next"));
-  prevBtn.addEventListener("click", () => updateCarousel("prev"));
+  if (direction === "next" && currentIndex < maxIndex) currentIndex++;
+  if (direction === "prev" && currentIndex > 0) currentIndex--;
+
+  cards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+nextBtn.addEventListener("click", () => updateCarousel("next"));
+prevBtn.addEventListener("click", () => updateCarousel("prev"));
+
+// Manipulação para obter rolagem suave
+const lenis = new Lenis({
+  duration: 2.0,
+  easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+  smooth: false,
+  smoothTouch: false,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
